@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense & Budget Visualizer</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>💰 Budget Tracker</h1>
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">🌙</button>
+  </header>
+
+  <main>
+    <!-- Balance Summary -->
+    <section class="balance-card">
+      <div class="balance-item">
+        <span class="label">Balance</span>
+        <span class="amount" id="balance">$0.00</span>
+      </div>
+      <div class="balance-item income">
+        <span class="label">Income</span>
+        <span class="amount" id="total-income">$0.00</span>
+      </div>
+      <div class="balance-item expense">
+        <span class="label">Expenses</span>
+        <span class="amount" id="total-expense">$0.00</span>
+      </div>
+    </section>
+
+    <!-- Spending Limit -->
+    <section class="limit-section">
+      <label for="spending-limit">Monthly Spending Limit ($)</label>
+      <div class="limit-row">
+        <input type="number" id="spending-limit" placeholder="e.g. 1000" min="0" />
+        <button id="set-limit-btn">Set</button>
+      </div>
+      <div id="limit-warning" class="limit-warning hidden">
+        ⚠️ You've exceeded your spending limit!
+      </div>
+    </section>
+
+    <!-- Add Transaction -->
+    <section class="form-section">
+      <h2>Add Transaction</h2>
+      <form id="transaction-form" novalidate>
+        <input type="text" id="desc" placeholder="Item name" />
+        <input type="number" id="amount" placeholder="Amount" min="0.01" step="0.01" />
+        <div class="row-group">
+          <select id="category">
+            <option value="">-- Category --</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Fun">Fun</option>
+            <option value="Housing">Housing</option>
+            <option value="Health">Health</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Other">Other</option>
+          </select>
+          <select id="tx-type">
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+          </select>
+        </div>
+        <div id="form-error" class="form-error hidden"></div>
+        <button type="submit">+ Add</button>
+      </form>
+    </section>
+
+    <!-- Chart -->
+    <section class="chart-section">
+      <h2>Spending by Category</h2>
+      <div class="chart-wrap">
+        <canvas id="chart" aria-label="Spending by category chart" role="img"></canvas>
+      </div>
+    </section>
+
+    <!-- Transaction History -->
+    <section class="history-section">
+      <div class="history-header">
+        <h2>Transaction History</h2>
+        <div class="sort-controls">
+          <label for="sort-select">Sort:</label>
+          <select id="sort-select">
+            <option value="date">Date</option>
+            <option value="amount-asc">Amount ↑</option>
+            <option value="amount-desc">Amount ↓</option>
+            <option value="category">Category</option>
+          </select>
+        </div>
+      </div>
+      <ul id="transaction-list"></ul>
+    </section>
+  </main>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

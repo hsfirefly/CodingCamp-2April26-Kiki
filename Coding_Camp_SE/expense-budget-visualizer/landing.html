@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spendly — Track What Matters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">spendly</a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="index.html" class="nav-cta">Open App</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">✦ Free &amp; Private — No sign-up needed</span>
+      <h1 class="hero-heading">
+        Spend less time<br />
+        <em>worrying</em> about money.
+      </h1>
+      <p class="hero-sub">
+        A beautifully simple budget tracker that lives in your browser.
+        Add transactions, visualize spending, and stay on top of your finances — instantly.
+      </p>
+      <div class="hero-actions">
+        <a href="index.html" class="btn-primary">Start Tracking Free</a>
+        <a href="#how" class="btn-ghost">See how it works ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="mockup">
+        <div class="mockup-bar">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="mockup-body">
+          <div class="mock-balance">
+            <div class="mock-label">Total Balance</div>
+            <div class="mock-amount">$2,840.00</div>
+            <div class="mock-pills">
+              <span class="pill green">↑ $3,200</span>
+              <span class="pill red">↓ $360</span>
+            </div>
+          </div>
+          <div class="mock-chart">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="48" fill="none" stroke="#f3e8ff" stroke-width="20"/>
+              <circle cx="60" cy="60" r="48" fill="none" stroke="#fde68a" stroke-width="20"
+                stroke-dasharray="80 221" stroke-dashoffset="0" stroke-linecap="round"/>
+              <circle cx="60" cy="60" r="48" fill="none" stroke="#bfdbfe" stroke-width="20"
+                stroke-dasharray="60 221" stroke-dashoffset="-80" stroke-linecap="round"/>
+              <circle cx="60" cy="60" r="48" fill="none" stroke="#fbcfe8" stroke-width="20"
+                stroke-dasharray="81 221" stroke-dashoffset="-140" stroke-linecap="round"/>
+            </svg>
+            <div class="mock-chart-legend">
+              <span><i style="background:#fde68a"></i>Food</span>
+              <span><i style="background:#bfdbfe"></i>Transport</span>
+              <span><i style="background:#fbcfe8"></i>Fun</span>
+            </div>
+          </div>
+          <div class="mock-list">
+            <div class="mock-tx"><span class="mock-dot" style="background:#fde68a"></span><span>Groceries</span><span class="neg">-$42</span></div>
+            <div class="mock-tx"><span class="mock-dot" style="background:#bfdbfe"></span><span>Uber</span><span class="neg">-$12</span></div>
+            <div class="mock-tx"><span class="mock-dot" style="background:#fbcfe8"></span><span>Netflix</span><span class="neg">-$15</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Decorative blobs -->
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="section-label">Features</div>
+    <h2 class="section-heading">Everything you need.<br />Nothing you don't.</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#fef9c3; color:#ca8a04;">📊</div>
+        <h3>Visual Spending Chart</h3>
+        <p>See exactly where your money goes with a live pie chart that updates as you type.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#ede9fe; color:#7c3aed;">⚡</div>
+        <h3>Instant Transactions</h3>
+        <p>Add income or expenses in seconds. Name, amount, category — done.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#fce7f3; color:#be185d;">🔒</div>
+        <h3>100% Private</h3>
+        <p>All data stays in your browser. No accounts, no servers, no tracking.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#dcfce7; color:#15803d;">🌙</div>
+        <h3>Dark &amp; Light Mode</h3>
+        <p>Easy on the eyes day or night. Your preference is saved automatically.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#dbeafe; color:#1d4ed8;">⚠️</div>
+        <h3>Spending Limits</h3>
+        <p>Set a monthly budget cap and get alerted the moment you go over.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:#ffedd5; color:#c2410c;">↕️</div>
+        <h3>Sort &amp; Filter</h3>
+        <p>Sort transactions by date, amount, or category to find what you need fast.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="section-label">How it works</div>
+    <h2 class="section-heading">Up and running<br />in 30 seconds.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Open the app</h3>
+        <p>No install, no sign-up. Just click and go — it runs entirely in your browser.</p>
+      </div>
+      <div class="step-divider" aria-hidden="true">→</div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Add transactions</h3>
+        <p>Enter your income and expenses with a name, amount, and category.</p>
+      </div>
+      <div class="step-divider" aria-hidden="true">→</div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Watch it update</h3>
+        <p>Your balance and spending chart update live. Set a limit to stay on track.</p>
+      </div>
+    </div>
+    <div class="how-cta">
+      <a href="index.html" class="btn-primary">Try it now — it's free</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="nav-logo">spendly</span>
+    <p>Built with ♥ — no data ever leaves your device.</p>
+  </footer>
+
+  <script src="js/landing.js"></script>
+</body>
+</html>
